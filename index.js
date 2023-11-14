@@ -53,7 +53,7 @@ app.post("/login", async (req, res) => {
     if (!user) {
         return res.json({ status: "error", error: "User Not Found" });
     }
-    if (await bcrypt.compare(  password, user.  password)) {
+    if (await bcrypt.compare(  password, user.password)) {
         // If the email and password match, send a success response
         return res.json({ status: "ok", message: "Login Successfully" });
     }
